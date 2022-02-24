@@ -63,6 +63,7 @@ function HomePage() {
         MobileNo: MyData.MobileNo,
       };
 
+      console.log(MyData);
       axios
         .post(
           "https://sheet.best/api/sheets/2082ffaa-3171-4c8a-9aa4-a1f1f88297bc",
@@ -105,11 +106,26 @@ function HomePage() {
           <Typography style={{ flex: 1, fontSize: "22px" }}>
             Netcom Cabs
           </Typography>
+
+          <Button 
+            onClick={()=> {navigate('/citymeter-tariff')}}
+          >
+              CityMeter
+          </Button>
+
+
           <Button 
             onClick={()=> {navigate('/service')}}
           >
               Service
           </Button>
+
+          <Button 
+            onClick={()=> {navigate('/about')}}
+          >
+              About
+          </Button>
+
           <div
             style={{
               justifyContent: "center",
