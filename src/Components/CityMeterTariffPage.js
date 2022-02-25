@@ -62,14 +62,13 @@ export default function CityMeterTariffPage() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  const notesList=[
+  const notesList = [
     "Meter starts from your pickup place.",
     " Waiting charges free for first 5 minutes.",
     " Night charges(10pm to 6am) applicable.",
     " Package trip available at special rate.",
-    " Applicable within the city limit only."
-  ]
-
+    " Applicable within the city limit only.",
+  ];
 
   return (
     <RootDiv>
@@ -91,21 +90,28 @@ export default function CityMeterTariffPage() {
         <TableContainer sx={{ maxHeight: 440 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
-              <TableRow >
-                <TableCell align="center" style={{fontWeight:'bold'}}  >
-                Vehicle Type
+              <TableRow>
+                <TableCell align="center" style={{ fontWeight: "bold" }}>
+                  Vehicle Type
                 </TableCell>
-                <TableCell align="center" style={{fontWeight:'bold'}} >
-                Minimum Rate
+                <TableCell align="center" style={{ fontWeight: "bold" }}>
+                  Minimum Rate
                 </TableCell>
-                <TableCell align="center" colSpan={2} style={{fontWeight:'bold'}}>
-                Additional Charges Per Km
+                <TableCell
+                  align="center"
+                  colSpan={2}
+                  style={{ fontWeight: "bold" }}
+                >
+                  Additional Charges Per Km
                 </TableCell>
-                <TableCell align="center" colSpan={2} style={{fontWeight:'bold'}}>
-                Riding Charges Per Min
+                <TableCell
+                  align="center"
+                  colSpan={2}
+                  style={{ fontWeight: "bold" }}
+                >
+                  Riding Charges Per Min
                 </TableCell>
               </TableRow>
-              
             </TableHead>
             <TableBody>
               {rows
@@ -115,45 +121,81 @@ export default function CityMeterTariffPage() {
                     <TableRow
                       hover
                       role="checkbox"
-                      
                       tabIndex={-1}
                       key={row.name}
                     >
-                   <TableCell align="center">
-                   {row.name}
-                   </TableCell>
-                   <TableCell align="center">
-                   {row.rate}
-                   </TableCell>
-                   <TableCell align="center">
-                   {row.add1}
-                   </TableCell>
-                   <TableCell align="center">
-                   {row.add2}
-                   </TableCell>
-                   <TableCell align="center">
-                   {row.min1}
-                   </TableCell>
-                   <TableCell align="center">
-                   {row.min1}
-                   </TableCell>
+                      <TableCell
+                        align="center"
+                        style={{
+                          borderRightWidth: 1,
+                          borderRightColor: "grey",
+                          borderRightStyle: "solid",
+                        }}
+                      >
+                        {row.name}
+                      </TableCell>
+                      <TableCell
+                        style={{
+                          borderRightWidth: 1,
+                          borderRightColor: "grey",
+                          borderRightStyle: "solid",
+                        }}
+                        align="center"
+                      >
+                        {row.rate}{" "}
+                      </TableCell>
+                      <TableCell
+                        style={{
+                          borderRightWidth: 1,
+                          borderRightColor: "grey",
+                          borderRightStyle: "solid",
+                        }}
+                        align="center"
+                      >
+                        {row.add1}{" "}
+                      </TableCell>
+                      <TableCell
+                        style={{
+                          borderRightWidth: 1,
+                          borderRightColor: "grey",
+                          borderRightStyle: "solid",
+                        }}
+                        align="center"
+                      >
+                        {row.add2}{" "}
+                      </TableCell>
+                      <TableCell
+                        style={{
+                          borderRightWidth: 1,
+                          borderRightColor: "grey",
+                          borderRightStyle: "solid",
+                        }}
+                        align="center"
+                      >
+                        {row.min1}{" "}
+                      </TableCell>
+                      <TableCell
+                        style={{
+                          borderRightWidth: 1,
+                          borderRightColor: "grey",
+                          borderRightStyle: "solid",
+                        }}
+                        align="center"
+                      >
+                        {row.min1}{" "}
+                      </TableCell>
                     </TableRow>
-
-                    
-                    
                   );
                 })}
             </TableBody>
           </Table>
         </TableContainer>
 
-        <div style={{marginTop:'5%',marginLeft:'1%'}}>
-            <Typography style={{fontWeight:'bold'}}>Notes:</Typography>
-            {
-                notesList.map(el => (
-                    <Typography style={{marginLeft:'2%'}}> ➡ {el} </Typography>
-                ))
-            }
+        <div style={{ marginTop: "5%", marginLeft: "1%" }}>
+          <Typography style={{ fontWeight: "bold" }}>Notes:</Typography>
+          {notesList.map((el) => (
+            <Typography style={{ marginLeft: "2%" }}> ➡ {el} </Typography>
+          ))}
         </div>
       </BgDiv>
     </RootDiv>
