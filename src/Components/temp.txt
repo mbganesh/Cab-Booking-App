@@ -92,3 +92,20 @@
 
 
 
+
+You need to add `ref`
+
+  
+
+     <TextField
+            inputRef={autoCompleteRef}
+            ref={autoCompleteRef}
+            onChange={(event) => setQuery(event.target.value)}
+            value={query}
+            autoComplete="off"
+            id="outlined-basic"
+            label="Enter Place"
+            variant="outlined"
+          />
+
+Its work for me
