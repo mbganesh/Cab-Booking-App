@@ -267,12 +267,12 @@ export default function HomePage() {
 
   useEffect(() => {
     loadScript(
-      `https://maps.googleapis.com/maps/api/js?key=AIzaSyCneXQewu90VNJTWxGkX8zJFKM_9iYud3E&libraries=places`,
+      `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAP_API}&libraries=places`,
       () => handleScriptLoad(setdata, autoCompleteRef)
     );
 
     loadScriptLoc(
-      `https://maps.googleapis.com/maps/api/js?key=AIzaSyCneXQewu90VNJTWxGkX8zJFKM_9iYud3E&libraries=places`,
+      `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAP_API}&libraries=places`,
       () => handleScriptLoadLoc(setdata, autoCompleteLocRef)
     );
   }, []);
