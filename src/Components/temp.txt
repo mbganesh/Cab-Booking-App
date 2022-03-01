@@ -1,0 +1,111 @@
+-------------------------------------------------
+
+
+ <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginTop: "2%",
+              }}
+            >
+              <Typography style={{ fontWeight: "bold", fontSize: "18px" }}>
+                Quality Serices
+              </Typography>
+
+              <Typography>
+                Quality assurance extends beyond any transportation service of
+                your experience. In Netcom Cabs you can find a complete picture
+                of safety, security, comfort, common costs, and peace of mind.
+              </Typography>
+            </div>
+
+
+**************************************************************            
+
+<div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginTop: "2%",
+              }}
+            >
+              <Typography style={{ fontWeight: "bold", fontSize: "18px" }}>
+                Our Value Added Services
+              </Typography>
+              <div>
+                {serviceList.map((el) => (
+                  <Typography key={el}> ➡ {el} </Typography>
+                ))}
+              </div>
+            </div>
+
+///////////////////////////////////////////////////////////////////////////            
+
+
+ <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <Typography style={{ fontWeight: "bold", fontSize: "18px" }}>
+                Reliability
+              </Typography>
+
+              <Typography>
+                We are proud to introduce ourselves as a No: 1 call taxi. Our
+                service is available throughout Tamil Nadu and a few other
+                places like Bengaluru, Tirunelveli, Vizag, Vijayawada, and
+                Hyderabad. All types of cables are available according to
+                customer requirements. Our driver-guides help the customer find
+                the right place to drop off as this can benefit the new traveler
+                anywhere due to its free ride. All of our cabs arrive on time to
+                meet your travel needs with a transparent pricing structure.
+              </Typography>
+            </div>
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+ <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <Typography style={{ fontWeight: "bold", fontSize: "18px" }}>
+                Accessiblity
+              </Typography>
+
+              <Typography>
+                We are available across all over Tamil Nadu and in few more
+                locations like Bengaluru, Tirunelveli, Vizag, Vijayawada and
+                Hyderabad. Convenience of booking through web, phone and App.
+                Moreover, customer can pay only for the traveled kilometers and
+                proper bills are furnished to the customer.
+              </Typography>
+            </div>
+
+...........................................................................
+
+
+
+
+You need to add `ref`
+
+  
+
+     <TextField
+            inputRef={autoCompleteRef}
+            ref={autoCompleteRef}
+            onChange={(event) => setQuery(event.target.value)}
+            value={query}
+            autoComplete="off"
+            id="outlined-basic"
+            label="Enter Place"
+            variant="outlined"
+          />
+
+Its work for me
