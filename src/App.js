@@ -1,29 +1,26 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AboutPage from "./Components/AboutPage";
-import CityMeterTariffPage from "./Components/CityMeterTariffPage";
-import HomePage from "./Components/HomePage";
-import ServicePage from "./Components/ServicePage";
-import MyMap from "./Components/MyMap";
+import React from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import HomeComponent from "./HomeComponent";
+
+import JobVacancyComponent from "./JobVacancyComponent";
+import OurVehiclesComponent from "./OurVehiclesComponent";
+import ServicesComponent from "./ServicesComponent";
+import SpecialPackagesComponent from "./SpecialPackagesComponent";
 
 
 function App() {
-
-
   return (
-    <div>
-      <BrowserRouter>
+    <>
+      <HashRouter>
         <Routes>
-          <Route exact path="/" element={<HomePage/>} />
-          <Route exact path="/service" element={<ServicePage/>} />
-          <Route exact path="/about" element={<AboutPage/>} />
-          <Route exact path="/citymeter-tariff" element={<CityMeterTariffPage/>} />
-
-          <Route exact path="/mymap" element={<MyMap/>} />
-
-
+          <Route exact path="/" element={<HomeComponent />} />
+          <Route exact path="/jobVacancy" element={<JobVacancyComponent />} />
+          <Route exact path="/ourVehicles" element={<OurVehiclesComponent />} />
+          <Route exact path="/services" element={<ServicesComponent />} />
+          <Route exact path="/specialPackages" element={<SpecialPackagesComponent />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </HashRouter>
+    </>
   );
 }
 

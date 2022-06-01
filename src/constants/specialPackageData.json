@@ -1,0 +1,790 @@
+[{
+    "Tirunelveli To Tiruchendur": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1535",
+                "A/C": "1655"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS/ECO/VENTURE",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1675",
+                "A/C": "1795"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1830",
+                "A/C": "1950"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2120",
+                "A/C": "2240"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2,340",
+                "A/C": "2,340"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Kanniyakumari": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "200",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "1,960",
+                "A/C": "2,160"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "9",
+                "A/C": "10"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS/ECO/VENTURE",
+            "KM": "200",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2,180",
+                "A/C": "2,380"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "10",
+                "A/C": "11"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "200",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2,660",
+                "A/C": "2,860"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12",
+                "A/C": "13"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "200",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "3,700",
+                "A/C": "3,700"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Vaigaikulam Airport": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "80",
+            "FREE HRS": "4",
+            "RATE(Rs)": {
+                "Non A/C": "1075",
+                "A/C": "1155"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "80"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "80",
+            "FREE HRS": "4",
+            "RATE(Rs)": {
+                "Non A/C": "1175",
+                "A/C": "1255"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "80"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "80",
+            "FREE HRS": "4",
+            "RATE(Rs)": {
+                "Non A/C": "1310",
+                "A/C": "1390"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "80"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "80",
+            "FREE HRS": "4",
+            "RATE(Rs)": {
+                "Non A/C": "1520",
+                "A/C": "1600"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "100"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "80",
+            "FREE HRS": "3",
+            "RATE(Rs)": {
+                "Non A/C": "1,660",
+                "A/C": "1,660"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Trivandrum Airport": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "3950",
+                "A/C": "4280"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "4300",
+                "A/C": "4630"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "4560",
+                "A/C": "4890"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "5270",
+                "A/C": "5600"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "5,910",
+                "A/C": "5,910"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Nagarcoil": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "180",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2225",
+                "A/C": "2405"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "180",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2425",
+                "A/C": "2605"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "180",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2610",
+                "A/C": "2790"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "180",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "3020",
+                "A/C": "3200"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "180",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "3,360",
+                "A/C": "3,360"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Chennai": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "1200",
+            "FREE HRS": "48",
+            "RATE(Rs)": {
+                "Non A/C": "13,955",
+                "A/C": "15,155"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "1200",
+            "FREE HRS": "48",
+            "RATE(Rs)": {
+                "Non A/C": "15,175",
+                "A/C": "16,375"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "1200",
+            "FREE HRS": "48",
+            "RATE(Rs)": {
+                "Non A/C": "15,870",
+                "A/C": "17,070"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "1200",
+            "FREE HRS": "48",
+            "RATE(Rs)": {
+                "Non A/C": "22,820",
+                "A/C": "24,320"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "1200",
+            "FREE HRS": "48",
+            "RATE(Rs)": {
+                "Non A/C": "20,700",
+                "A/C": "20,700"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Courtallam": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "150",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "1880",
+                "A/C": "2030"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "150",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2050",
+                "A/C": "2200"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "150",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2220",
+                "A/C": "2370"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "150",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2570",
+                "A/C": "2720"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "150",
+            "FREE HRS": "6",
+            "RATE(Rs)": {
+                "Non A/C": "2,850",
+                "A/C": "2,850"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Papanasam": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1535",
+                "A/C": "1655"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1675",
+                "A/C": "1795"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1830",
+                "A/C": "1950"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2120",
+                "A/C": "2240"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2,340",
+                "A/C": "2,340"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Navathirupathi": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "140",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1765",
+                "A/C": "1905"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "140",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1925",
+                "A/C": "2065"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "140",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2090",
+                "A/C": "2230"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "140",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2420",
+                "A/C": "2560"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "140",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2,680",
+                "A/C": "2,680"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Tuticorin": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1535",
+                "A/C": "1655"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1675",
+                "A/C": "1795"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "1830",
+                "A/C": "1950"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2120",
+                "A/C": "2240"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "120",
+            "FREE HRS": "5",
+            "RATE(Rs)": {
+                "Non A/C": "2,340",
+                "A/C": "2,340"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+},
+{
+    "Tirunelveli To Madurai": [{
+            "VECHICLE TYPE": "INDICA",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "3950",
+                "A/C": "4280"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "11.5",
+                "A/C": "12.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "INDIGO/SWIFT/ETIOS",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "4300",
+                "A/C": "4630"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "12.5",
+                "A/C": "13.5"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "ECO/VENTURE",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "4560",
+                "A/C": "4890"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "13",
+                "A/C": "14"
+            },
+            "EXTRA PER HRS": "70"
+        },
+        {
+            "VECHICLE TYPE": "XYLO/TAVERA",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "5270",
+                "A/C": "5600"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "15",
+                "A/C": "16"
+            },
+            "EXTRA PER HRS": "90"
+        },
+        {
+            "VECHICLE TYPE": "INNOVA",
+            "KM": "330",
+            "FREE HRS": "11",
+            "RATE(Rs)": {
+                "Non A/C": "5,910",
+                "A/C": "5,910"
+            },
+            "EXTRA PER KM": {
+                "Non A/C": "17",
+                "A/C": "17"
+            },
+            "EXTRA PER HRS": "120"
+        }
+    ]
+}
+]

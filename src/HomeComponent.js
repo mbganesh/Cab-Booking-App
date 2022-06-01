@@ -1,14 +1,7 @@
-import "../App.css";
+import "./App.css";
 import MainmenuBar from "./MainmenuBar";
-import {
-  Card,
-  InputAdornment,
-  TextField,
-  Typography,
-  Modal,
-  Box,
-} from "@mui/material";
-import BackImage from "../backimg.svg";
+import { Card, InputAdornment, TextField, Typography, Modal, Box,ListItemIcon } from "@mui/material";
+import BackImage from "./Images/homeImages/bgImage.svg";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import MenuItem from "@mui/material/MenuItem";
@@ -20,7 +13,14 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import Swal from "sweetalert2";
 import Lottie from "react-lottie";
-import TaxiAnimation from "../Loty.json";
+import TaxiAnimation from "./Images/homeImages/carRunningLottie.json";
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import { Colors, Fonts } from "./constants";
+import RoundTripIcon from "@mui/icons-material/LoopOutlined";
+import OneWayIcon from "@mui/icons-material/ArrowCircleUp";
+import HourlyIcon from "@mui/icons-material/DepartureBoard";
+import ListItemText from "@mui/material/ListItemText";
+
 
 const style = (theme) => ({
   position: "absolute",
@@ -31,10 +31,9 @@ const style = (theme) => ({
   boxShadow: 18,
   padding: 2,
 });
-
 const cardStyle = (theme) => ({
   width: 425,
-  height: 475,
+  height: 565,
   backgroundColor: "#EFEFEF",
   display: "flex",
   flexDirection: "column",
@@ -53,13 +52,16 @@ const cardStyle = (theme) => ({
   },
 });
 
+const cardText = () => ({
+  fontFamily:Fonts.UBUNTU,
+
+})
 const textfieldStyle = (theme) => ({
   [`& .${outlinedInputClasses.root}.${outlinedInputClasses.focused} .${outlinedInputClasses.notchedOutline}`]:
     {
       borderColor: "black",
     },
 });
-
 const mobNoStyle = (theme) => ({
   "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
     display: "none",
@@ -72,7 +74,6 @@ const mobNoStyle = (theme) => ({
       borderColor: "black",
     },
 });
-
 const Root = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
@@ -86,127 +87,86 @@ const Root = styled("div")(({ theme }) => ({
   },
 }));
 
-let autoComplete;
-let autoCompleteLoc;
-
-const loadScript = (url, callback) => {
-  let script = document.createElement("script");
-  script.type = "text/javascript";
-
-  if (script.readyState) {
-    script.onreadystatechange = function () {
-      if (script.readyState === "loaded" || script.readyState === "complete") {
-        script.onreadystatechange = null;
-        callback();
-      }
-    };
-  } else {
-    script.onload = () => callback();
-  }
-
-  script.src = url;
-  document.getElementsByTagName("head")[0].appendChild(script);
-};
-
-function handleScriptLoad(updateQuery, autoCompleteRef) {
-  autoComplete = new window.google.maps.places.Autocomplete(
-    autoCompleteRef.current,
-    { types: ["(cities)"], componentRestrictions: { country: "ind" } }
-  );
-  autoComplete.setFields(["address_components", "formatted_address"]);
-  autoComplete.addListener("place_changed", () =>
-    handlePlaceSelect(updateQuery)
-  );
-}
-
-async function handlePlaceSelect(updateQuery) {
-  const addressObject = autoComplete.getPlace();
-  const query = addressObject.formatted_address;
-  updateQuery(query);
-  //console.log(addressObject);
-}
 
 
 
-const loadScriptLoc = (url, callback) => {
-  let script = document.createElement("script");
-  script.type = "text/javascript";
-
-  if (script.readyState) {
-    script.onreadystatechange = function () {
-      if (script.readyState === "loaded" || script.readyState === "complete") {
-        script.onreadystatechange = null;
-        callback();
-      }
-    };
-  } else {
-    script.onload = () => callback();
-  }
-
-  script.src = url;
-  document.getElementsByTagName("head")[0].appendChild(script);
-};
-
-function handleScriptLoadLoc(updateQueryLoc, autoCompleteLocRef) {
-  autoCompleteLoc = new window.google.maps.places.Autocomplete(
-    autoCompleteLocRef.current,
-    { types: ["(cities)"], componentRestrictions: { country: "ind" } }
-  );
-  autoCompleteLoc.setFields(["address_components", "formatted_address"]);
-  autoCompleteLoc.addListener("place_changed", () =>
-    handlePlaceSelectLoc(updateQueryLoc)
-  );
-}
-
-async function handlePlaceSelectLoc(updateQueryLoc) {
-  const addressObject = autoCompleteLoc.getPlace();
-  const query = addressObject.formatted_address;
-  updateQueryLoc(query);
-  //console.log(addressObject);
-}
-
-export default function HomePage() {
+function HomeComponent() {
+  const [done, setdone] = useState("");
   const [open, setopen] = useState(false);
+  const [errorCustName, seterrorCustName] = useState(false);
   const [errorMsgPL, seterrorMsgPL] = useState(false);
   const [errorMsgDL, seterrorMsgDL] = useState(false);
   const [errorMsgD, seterrorMsgD] = useState(false);
   const [errorMsgT, seterrorMsgT] = useState(false);
   const [errorMsgM, seterrorMsgM] = useState(false);
+  const [errorMsgTrip, seterrorMsgTrip] = useState(false);
   var presentDate = new moment().format("YYYY-MM-DD");
+
   const [data, setdata] = useState({
+    "Customer Name": "",
     "Pick up Location": "",
     "Drop Location": "",
-    "Pick Up Date": presentDate,
     "Pick Up Time": "",
     "Mobile Number": "",
   });
+
+  const [dateData, setdateData] = useState({
+    "Pick Up Date": presentDate,
+  });
+  const [tripData, settripData] = useState({ Trip: "Round Trip" });
+
+  const trip = [
+    {
+      text: "Round Trip",
+      icon: <RoundTripIcon style={{ verticalAlign: "text-bottom" }} />,
+    },
+    {
+      text: "Oneway Trip",
+      icon: <OneWayIcon style={{ verticalAlign: "text-bottom" }} />,
+    },
+    {
+      text: "Hourly Rental",
+      icon: <HourlyIcon style={{ verticalAlign: "text-bottom" }} />,
+    },
+  ];
+
   const handleSendData = () => {
     const mydata = {
+      "Customer Name": data["Customer Name"],
       "Pick Up Location": data["Pick up Location"],
       "Drop Location": data["Drop Location"],
-      "Pick Up Date": data["Pick Up Date"],
+      "Pick Up Date": dateData["Pick Up Date"],
       "Pick Up Time": data["Pick Up Time"],
+      Trip: tripData.Trip,
       "Mobile Number": data["Mobile Number"],
     };
+
+    console.log(mydata);
     {
-      data["Pick up Location"] === ""
-        ? seterrorMsgPL(true)
-        : data["Drop Location"] === ""
-        ? seterrorMsgDL(true)
-        : data["Pick Up Date"] === ""
-        ? seterrorMsgD(true)
-        : data["Pick Up Time"] === ""
-        ? seterrorMsgT(true)
-        : data["Mobile Number"] === "" || data["Mobile Number"].length < 10
-        ? seterrorMsgM(true)
-        : setopen(true);
-      {
-        if (
+      data["Customer Name"] === ""
+      ? seterrorCustName(true)
+      : data["Pick up Location"] === ""
+      ? seterrorMsgPL(true)
+      : data["Drop Location"] === ""
+      ? seterrorMsgDL(true)
+      : dateData["Pick Up Date"] === ""
+      ? seterrorMsgD(true)
+      : data["Pick Up Time"] === ""
+      ? seterrorMsgT(true)
+      : tripData.Trip === ""
+      ? seterrorMsgTrip(true)
+      : data["Mobile Number"] === "" || data["Mobile Number"].length < 10
+      ? seterrorMsgM(true)
+      : setopen(true);
+    {
+        if (data["Customer Name"]!==""&&
           data["Pick up Location"] !== "" &&
           data["Drop Location"] !== "" &&
-          data["Pick Up Date"] !== "" &&
+          dateData["Pick Up Date"] !== "" &&
           data["Pick Up Time"] !== "" &&
-          data["Mobile Number"] !== ""
+          tripData.Trip !== "" &&
+          data["Mobile Number"] !== "" &&
+          data["Mobile Number"].length === 10
         ) {
           axios
             .post(
@@ -214,17 +174,23 @@ export default function HomePage() {
               mydata
             )
             .then((result) => {
-              //console.log(result.data);
+              console.log(result.data);
               setdata({
                 ...data,
+                "Customer Name":"",
                 "Pick up Location": "",
                 "Drop Location": "",
-                "Pick Up Date": presentDate,
                 "Pick Up Time": "",
+                Trip: "Round Trip",
                 "Mobile Number": "",
               });
+              setdateData({ ...dateData, "Pick Up Date": presentDate });
               setopen(false);
-              Swal.fire("sdfgjdfkg", "dfgfdgdfg", "success");
+              Swal.fire(
+                "Your Cab has been Booked",
+                "Happy Journey !",
+                "success"
+              );
             });
         }
       }
@@ -249,7 +215,7 @@ export default function HomePage() {
   var newTimeCheck = hoursArray.indexOf(newTime);
   var currentHour = "";
   {
-    data["Pick Up Date"] === presentDate
+    dateData["Pick Up Date"] === presentDate
       ? (currentHour = hoursArray.slice(newTimeCheck + 1))
       : (currentHour = hoursArray);
   }
@@ -262,26 +228,125 @@ export default function HomePage() {
     },
   };
 
+  let autoComplete;
+
+  const loadScript = (url, callback) => {
+    let script = document.createElement("script");
+    script.type = "text/javascript";
+
+    if (script.readyState) {
+      script.onreadystatechange = function () {
+        if (
+          script.readyState === "loaded" ||
+          script.readyState === "complete"
+        ) {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      script.onload = () => callback();
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  };
+
+  function handleScriptLoad(updateQuery, autoCompleteRef) {
+    autoComplete = new window.google.maps.places.Autocomplete(
+      autoCompleteRef.current,
+      { types: ["(cities)"], componentRestrictions: { country: "ind" } }
+    );
+    autoComplete.setFields(["address_components", "formatted_address"]);
+    autoComplete.addListener("place_changed", () =>
+      handlePlaceSelect(updateQuery)
+    );
+  }
+
+  async function handlePlaceSelect(updateQuery) {
+    const addressObject = autoComplete.getPlace();
+    const query = addressObject.formatted_address;
+    updateQuery(query);
+    console.log(addressObject);
+    setdata({ ...data, "Pick up Location": addressObject.formatted_address });
+  }
+
+  let autoCompleteTo;
+
+  const loadScriptTo = (url, callback) => {
+    let script = document.createElement("script");
+    script.type = "text/javascript";
+
+    if (script.readyState) {
+      script.onreadystatechange = function () {
+        if (
+          script.readyState === "loaded" ||
+          script.readyState === "complete"
+        ) {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      script.onload = () => callback();
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  };
+
+  function handleScriptLoadTo(updateQueryTo, autoCompleteToRef) {
+    autoCompleteTo = new window.google.maps.places.Autocomplete(
+      autoCompleteToRef.current,
+      { types: ["(cities)"], componentRestrictions: { country: "ind" } }
+    );
+    autoCompleteTo.setFields(["address_components", "formatted_address"]);
+    autoCompleteTo.addListener("place_changed", () =>
+      handlePlaceSelectTo(updateQueryTo)
+    );
+  }
+
+  async function handlePlaceSelectTo(updateQueryTo) {
+    const addressObject = autoCompleteTo.getPlace();
+    const query = addressObject.formatted_address;
+    updateQueryTo(query);
+    console.log(addressObject);
+    setdata({ ...data, "Drop Location": addressObject.formatted_address });
+  }
+
   const autoCompleteRef = useRef(null);
-  const autoCompleteLocRef = useRef(null);
+  const autoCompleteToRef = useRef(null);
+
+  const APILink = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCneXQewu90VNJTWxGkX8zJFKM_9iYud3E&libraries=places`;
+
+  const apiFunc = (setdata, autoCompleteRef) => {
+    loadScript(APILink, () => handleScriptLoad(setdata, autoCompleteRef));
+  };
+
+  const apiFuncTo = (setdata, autoCompleteToRef) => {
+    loadScriptTo(APILink, () => handleScriptLoadTo(setdata, autoCompleteToRef));
+  };
 
   useEffect(() => {
-    loadScript(
-      `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAP_API}&libraries=places`,
-      () => handleScriptLoad(setdata, autoCompleteRef)
-    );
+    console.log("useEdffect");
+    console.log(done);
+    if (done === "Pick") {
+      console.log("if " + done);
+      apiFunc(setdata, autoCompleteRef);
+    } else if (done === "PickUp") {
+      console.log("elsee  if " + done);
 
-    loadScriptLoc(
-      `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAP_API}&libraries=places`,
-      () => handleScriptLoadLoc(setdata, autoCompleteLocRef)
-    );
-  }, []);
+      apiFuncTo(setdata, autoCompleteToRef);
+    }
+  }, [done]);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-      <MainmenuBar />
+      <MainmenuBar appBtnColor= {Colors.HOME_MAIN_COLOR} appBtnText= {"Home"} />
       <Root>
         <Card sx={cardStyle}>
+          
+          <div style={{display:"flex", flexDirection:"column"}}>
           <div
             style={{
               display: "flex",
@@ -289,21 +354,49 @@ export default function HomePage() {
               justifyContent: "center",
             }}
           >
-            <Typography variant="h5">Book your cab now !</Typography>
+            <Typography sx={{fontFamily:Fonts.UBUNTU, color:Colors.APP_SECOND_COLOR}} variant="h5">Book your cab now !</Typography>
           </div>
-          <div>
-            <Typography>PickUp Location*</Typography>
+          <div style={{marginTop:10}}>
+            <Typography sx= {cardText}>Name</Typography>
+            <TextField
+              sx={textfieldStyle}
+              placeholder=""
+              size="small"
+              autoComplete="off"
+              fullWidth
+              onChange={(e) => {
+                setdata({ ...data, "Customer Name": e.target.value });
+                seterrorCustName(false);
+
+              }}
+              value={data["Customer Name"]}
+              error={errorCustName}
+              helperText={!errorCustName ? "" : "Please enter Customer Name"}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment style={{ marginRight: 10 }}>
+                    <PersonOutlineOutlinedIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </div>
+
+          <div style={{marginTop:10}}>
+            <Typography sx= {cardText}>PickUp Location*</Typography>
             <TextField
               inputRef={autoCompleteRef}
               ref={autoComplete}
-              placeholder=""
               sx={textfieldStyle}
+              placeholder=""
               size="small"
               autoComplete="off"
               fullWidth
               onChange={(e) => {
                 setdata({ ...data, "Pick up Location": e.target.value });
                 seterrorMsgPL(false);
+                setdone("Pick");
+                console.log(e.target.value);
               }}
               value={data["Pick up Location"]}
               error={errorMsgPL}
@@ -317,11 +410,11 @@ export default function HomePage() {
               }}
             />
           </div>
-          <div>
-            <Typography>Drop Location*</Typography>
+          <div style={{marginTop:10}}>
+            <Typography sx= {cardText}>Drop Location*</Typography>
             <TextField
-              inputRef={autoCompleteLocRef}
-              ref={autoCompleteLoc}
+              inputRef={autoCompleteToRef}
+              ref={autoComplete}
               placeholder=""
               sx={textfieldStyle}
               autoComplete="off"
@@ -330,6 +423,7 @@ export default function HomePage() {
               onChange={(e) => {
                 setdata({ ...data, "Drop Location": e.target.value });
                 seterrorMsgDL(false);
+                setdone("PickUp");
               }}
               value={data["Drop Location"]}
               error={errorMsgDL}
@@ -343,8 +437,8 @@ export default function HomePage() {
               }}
             />
           </div>
-          <div>
-            <Typography>Pickup Date & Time*</Typography>
+          <div style={{marginTop:10}}> 
+            <Typography sx= {cardText}>Pickup Date & Time*</Typography>
             <div
               style={{
                 display: "flex",
@@ -358,15 +452,11 @@ export default function HomePage() {
                 type="date"
                 autoComplete="off"
                 onChange={(e) => {
-                  setdata({ ...data, "Pick Up Date": e.target.value });
+                  setdateData({ ...dateData, "Pick Up Date": e.target.value });
                   seterrorMsgD(false);
                 }}
                 inputProps={{ min: presentDate }}
-                value={
-                  data["Pick Up Date"] === ""
-                    ? presentDate
-                    : data["Pick Up Date"]
-                }
+                value={dateData["Pick Up Date"] === "" ? presentDate : dateData["Pick Up Date"]}
                 error={errorMsgD}
                 helperText={!errorMsgD ? "" : "Please enter pickup date"}
               />
@@ -374,13 +464,14 @@ export default function HomePage() {
                 <TextField
                   sx={textfieldStyle}
                   select
+                  SelectProps={{ MenuProps: { sx: { maxHeight: 247 } } }}
                   size="small"
                   fullWidth
+                  MenuProps={{ style: { maxHeight: 247 } }}
                   onChange={(e) => {
                     setdata({ ...data, "Pick Up Time": e.target.value });
                     seterrorMsgT(false);
                   }}
-                  SelectProps={{ MenuProps: { sx: { maxHeight: 247 } } }}
                   value={data["Pick Up Time"]}
                   InputProps={{
                     startAdornment: (
@@ -393,14 +484,47 @@ export default function HomePage() {
                   helperText={!errorMsgT ? "" : "Please enter pickup time"}
                 >
                   {currentHour.map((text) => (
-                    <MenuItem value={text} key={text}>{text}</MenuItem>
+                    <MenuItem value={text}>{text}</MenuItem>
                   ))}
                 </TextField>
               </div>
             </div>
           </div>
-          <div>
-            <Typography>Mobile Number*</Typography>
+
+          <div style={{marginTop:10}}>
+            <Typography>Trip</Typography>
+            <TextField
+              size="small"
+              fullWidth
+              select
+             
+              sx={textfieldStyle}
+              onChange={(e) => {
+                settripData({ ...tripData, Trip: e.target.value });
+                seterrorMsgTrip(false);
+              }}
+              value={tripData.Trip === "" ? "Round Trip" : tripData.Trip}
+            >
+              {trip.map((item) => (
+                <MenuItem value={item.text}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <ListItemIcon>{item.icon}</ListItemIcon>
+                    <ListItemText>{item.text}</ListItemText>
+                  </div>
+                </MenuItem>
+              ))}
+            </TextField>
+          </div>
+
+          <div style={{marginTop:10}}>
+            <Typography sx= {cardText}>Mobile Number*</Typography>
             <TextField
               size="small"
               autoComplete="off"
@@ -434,15 +558,16 @@ export default function HomePage() {
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
+              marginTop:10
             }}
           >
-            <Typography style={{ fontSize: 12 }}>
+            <Typography sx= {cardText} style={{ fontSize: 12 }}>
               By Clicking Book my Cab, you agree to Netcom Cab's{" "}
               <span
                 style={{
-                  color: "#f9b233",
+                  color: Colors.APP_SECOND_COLOR,
                   textDecoration: "underline",
-                  cursor: "pointer",
+                  cursor: "pointer",fontFamily:Fonts.UBUNTU
                 }}
               >
                 Terms of Use
@@ -450,9 +575,9 @@ export default function HomePage() {
               and{" "}
               <span
                 style={{
-                  color: "#f9b233",
+                  color: Colors.APP_SECOND_COLOR,
                   textDecoration: "underline",
-                  cursor: "pointer",
+                  cursor: "pointer",fontFamily:Fonts.UBUNTU
                 }}
               >
                 Privacy Policy
@@ -460,12 +585,11 @@ export default function HomePage() {
               .
             </Typography>
           </div>
-          <div>
+          <div style={{marginTop:10}}>
             <Button
               fullWidth
-              size="small"
               style={{
-                backgroundColor: "grey",
+                backgroundColor: Colors.APP_SECOND_COLOR,fontFamily:Fonts.UBUNTU,
                 color: "white",
                 textTransform: "none",
               }}
@@ -473,6 +597,8 @@ export default function HomePage() {
             >
               Book My Cab
             </Button>
+          </div>
+
           </div>
         </Card>
       </Root>
@@ -503,3 +629,6 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+export default HomeComponent;
