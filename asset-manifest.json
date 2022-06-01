@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/CabBookingAppLive/static/css/main.674e1bd5.css",
+    "main.js": "/CabBookingAppLive/static/js/main.977676d3.js",
+    "static/js/787.88800ccc.chunk.js": "/CabBookingAppLive/static/js/787.88800ccc.chunk.js",
+    "static/media/bgImage.svg": "/CabBookingAppLive/static/media/bgImage.0d466d13e19f4c7ade3bff7ebb9f5e54.svg",
+    "static/media/head.svg": "/CabBookingAppLive/static/media/head.ffd965256022e83d1eb279c6803cc3d1.svg",
+    "static/media/bk.png": "/CabBookingAppLive/static/media/bk.45c43a8be4a105ad74a0.png",
+    "index.html": "/CabBookingAppLive/index.html",
+    "main.674e1bd5.css.map": "/CabBookingAppLive/static/css/main.674e1bd5.css.map",
+    "main.977676d3.js.map": "/CabBookingAppLive/static/js/main.977676d3.js.map",
+    "787.88800ccc.chunk.js.map": "/CabBookingAppLive/static/js/787.88800ccc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.674e1bd5.css",
+    "static/js/main.977676d3.js"
+  ]
+}
